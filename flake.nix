@@ -1,15 +1,39 @@
 {
-  description = "A very basic flake";
+  description = "NixOS Dotfiles";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs }: {
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+    }@inputs:
+    {
+      nixosConfigurations = {
+        laptop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/laptop/configuration.nix
+          home-manager.nixosModules.default
 
-    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
 
-    packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
+            home-manager.users.river = import ./hosts/laptop/home.nix;
+          }
 
-  };
+        ];
+      };
+      }
+    };
 }
