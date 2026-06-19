@@ -3,6 +3,8 @@
 {
   imports = [
     ./programs/bash.nix
+    ./programs/starship.nix
+    ./programs/git.nix
   ];
 
   home.username = "river";

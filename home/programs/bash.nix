@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./starship.nix
+  ];
+
   programs.bash = {
     enable = true;
     shellAliases = {
@@ -23,6 +27,7 @@
 
     initExtra = ''
       eval "$(zoxide init bash)"
+      eval "$(starship init bash)"
       source ${pkgs.carapace}/share/bash/carapace.bash
       export EDITOR=nvim
     '';
