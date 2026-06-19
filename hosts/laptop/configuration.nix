@@ -9,6 +9,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/virtualization
+    ../../modules/desktop/plasma
   ];
 
   boot = {
@@ -60,6 +61,7 @@
     ghostty
     starship
     tmux
+    mpv
     zoxide
     fd
     ripgrep
