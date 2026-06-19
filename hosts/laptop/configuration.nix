@@ -55,6 +55,8 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  nixpkgs.config.allowUnfree = true;
+
   environment.systemPackages = with pkgs; [
     neovim
     git
@@ -69,6 +71,7 @@
     ripgrep
     fzf
     cmatrix
+    vscode
   ];
 
   services.openssh.enable = true;
