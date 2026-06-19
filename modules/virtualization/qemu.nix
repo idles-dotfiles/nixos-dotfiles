@@ -10,7 +10,6 @@
   programs.virt-manager.enable = true;
 
   virtualisation.libvirtd.qemu = {
-    ovmf.enable = true;
     swtpm.enable = true;
   };
 

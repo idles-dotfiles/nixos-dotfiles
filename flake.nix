@@ -19,21 +19,21 @@
     {
       nixosConfigurations = {
         laptop = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/laptop/configuration.nix
-          home-manager.nixosModules.default
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/laptop/configuration.nix
+            home-manager.nixosModules.default
 
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
 
-            home-manager.users.river = import ./hosts/laptop/home.nix;
-          }
+              home-manager.users.river = import ./home;
+            }
 
-        ];
+          ];
+        };
       };
-      }
     };
 }

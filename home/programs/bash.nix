@@ -26,15 +26,15 @@
       source ${pkgs.carapace}/share/bash/carapace.bash
       export EDITOR=nvim
     '';
+  };
 
-    # Just to make sure pkgs are installed
-    home.packages = with pkgs; [
-      bat
-      eza
-      zoxide
-      carapace
-      neovim
-      kubectl
-    ];
-  }
+  # Just to make sure pkgs are installed
+  home.packages = with pkgs; [
+    bat
+    eza
+    zoxide
+    carapace
+    neovim
+    kubectl
+  ];
 }

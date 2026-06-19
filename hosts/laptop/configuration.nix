@@ -8,10 +8,11 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ../../modules/virtualization
   ];
 
   boot = {
-    
+
     loader = {
       grub = {
         enable = true;
@@ -41,13 +42,10 @@
     isNormalUser = true;
     extraGroups = [
       "wheel"
-      "libvirtd"
-      "kvm"
     ];
   };
 
   programs.firefox.enable = true;
-  programs.virt-manager.enable = true;
   programs.mtr.enable = true;
   programs.gnupg.agent = {
     enable = true;
@@ -68,17 +66,6 @@
     fzf
     cmatrix
   ];
-
-  virtualization = {
-    libvirtd.enable = true;
-    spiceUSBRedirection.enable = true;
-
-    podman = {
-      enable = true;
-      dockerCompat = true; # lets you use `docker` commands → podman
-      defaultNetwork.settings.dns_enabled = true;
-    };
-  };
 
   services.openssh.enable = true;
   services.code-server = {
