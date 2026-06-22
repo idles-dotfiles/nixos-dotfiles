@@ -16,6 +16,8 @@
     neovim
     btop
     unzip
+    mpv
+    wl-clipboard
   ];
 
   nix.gc = {

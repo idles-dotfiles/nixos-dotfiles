@@ -10,6 +10,9 @@
     ../../modules/development
     ../../modules/networking
     ../../modules/virtualization
+
+    ## Desktop Environment
+    ../../desktops/hyprland
   ];
 
   boot = {
@@ -48,6 +51,7 @@
 
   environment.systemPackages = with pkgs; [
     tpm2-tools
+    brave
   ];
 
   system.stateVersion = "26.05";
