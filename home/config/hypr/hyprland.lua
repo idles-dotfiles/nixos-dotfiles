@@ -1,0 +1,7 @@
+require("autostart.lua")
+require("keybinds.lua")
+require("monitor.lua")
+require("decoration.lua")
+require("general.lua")
+require("smart-gaps.lua")
+require("inputs.lua")

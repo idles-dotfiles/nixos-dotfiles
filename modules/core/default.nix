@@ -19,6 +19,8 @@
     mpv
     wl-clipboard
     ghostty
+    wireplumber
+    brightnessctl
   ];
 
   nix.gc = {
