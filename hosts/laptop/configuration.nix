@@ -29,13 +29,13 @@
     loader = {
       efi = {
         canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot"; # Adjust if your EFI partition is mounted elsewhere (e.g., /boot/efi)
+        efiSysMountPoint = "/boot";
       };
       grub = {
         enable = true;
-        device = "nodev"; # "nodev" is required for EFI installs
+        device = "nodev";
         efiSupport = true;
-        useOSProber = true; # Set to true if you are dual-booting with Windows/other distros
+        useOSProber = true;
       };
     };
 
