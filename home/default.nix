@@ -8,6 +8,7 @@
 
   home.file = {
     ".config/hypr".source = ./config/hypr;
+    ".config/tmux".source = ./config/tmux;
   };
 
   home.username = "river";
