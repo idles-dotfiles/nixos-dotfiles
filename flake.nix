@@ -29,7 +29,7 @@
         inherit system;
 
         specialArgs = {
-          disk = "/dev/disk/by-id/REPLACE_ME"; # 👈 change at install time
+          disk = "/dev/disk/by-id/nvme-SAMSUNG_MZVLB256HBHQ-000H1_S4GNNX2RC66163";
         };
 
         modules = [
