@@ -4,6 +4,12 @@
   imports = [
     ./hardware-configuration.nix
     ./disko.nix
+
+    # Modules
+    ../../modules/virtualization
+    ../../modules/core
+    ../../modules/networking
+    ../../modules/development
   ];
 
   boot = {
@@ -35,62 +41,14 @@
     sudo.wheelNeedsPassword = false;
   };
 
-  networking = {
-    hostName = "laptop";
-    networkmanager.enable = true;
-
-    firewall = {
-      enable = true;
-
-      allowPing = true;
-
-      allowedTCPPorts = [ 22 80 ];
-      allowedUDPPorts = [ 51820 ];
-    }
-  };
-
-  time.timeZone = "America/Chicago";
-
   services.zfs.autoScrub.enable = true;
   services.zfs.autoSnapshot.enable = true;
 
   networking.hostId = "8425e349";
 
-  users.users.river = {
-    isNormalUser = true;
-    extraGroups = [
-      "wheel"
-      "networkmanager"
-      "podman"
-    ];
-  };
-
   environment.systemPackages = with pkgs; [
-    git
-    neovim
-    btop
-    unzip
     tpm2-tools
   ];
-
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 7d";
-  };
-
-  nix.settings.auto-optimise-store = true;
-
-  services.openssh = {
-    enable = true;
-    settings.PermitRootLogin = "no";
-  };
-
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-    alsa.enable = true;
-  };
 
   system.stateVersion = "26.05";
 }
