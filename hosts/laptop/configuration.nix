@@ -52,6 +52,7 @@
   environment.systemPackages = with pkgs; [
     tpm2-tools
     brave
+    fprintd # Fingerprint
   ];
 
   system.stateVersion = "26.05";
