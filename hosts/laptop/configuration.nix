@@ -20,11 +20,6 @@
     supportedFilesystems = [ "zfs" ];
 
     initrd = {
-      luks.devices."cryptroot" = {
-        device = "/dev/disk/by-partlabel/luks";
-        allowDiscards = true;
-      };
-
       availableKernelModules = [
         "tpm_tis"
         "tpm_crb"
