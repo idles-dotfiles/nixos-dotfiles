@@ -3,6 +3,6 @@
 {
   programs.eza = {
     enable = true;
-    withIcons = true;
+    icons = "auto";
   };
 }

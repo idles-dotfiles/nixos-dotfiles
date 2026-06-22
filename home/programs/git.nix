@@ -3,6 +3,13 @@
 {
   programs.git = {
     enable = true;
-    withDelta = true;
+  };
+  programs.delta = {
+    enable = true;
+    options = {
+      features = "decorations interactive";
+      navigate = true;
+      hyperlinks = true;
+    };
   };
 }

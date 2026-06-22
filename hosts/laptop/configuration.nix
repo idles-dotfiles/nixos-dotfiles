@@ -16,23 +16,34 @@
   ];
 
   boot = {
+    zfs.forceImportRoot = false;
     supportedFilesystems = [ "zfs" ];
-    loader = {
-      initrd = {
-        systemd.enable = true;
 
-        luks.devices."cryptroot" = {
-          device = "/dev/disk/by-partlabel/luks";
-          allowDiscards = true;
-        };
-
-        initrd.availableKernelModules = [
-          "tpm_tis"
-          "tpm_crb"
-        ];
+    initrd = {
+      luks.devices."cryptroot" = {
+        device = "/dev/disk/by-partlabel/luks";
+        allowDiscards = true;
       };
-      efi.canTouchEfiVariables = true;
+
+      availableKernelModules = [
+        "tpm_tis"
+        "tpm_crb"
+      ];
     };
+
+    loader = {
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot"; # Adjust if your EFI partition is mounted elsewhere (e.g., /boot/efi)
+      };
+      grub = {
+        enable = true;
+        device = "nodev"; # "nodev" is required for EFI installs
+        efiSupport = true;
+        useOSProber = true; # Set to true if you are dual-booting with Windows/other distros
+      };
+    };
+
     kernelModules = [
       "tpm_tis"
       "tpm_crb"
