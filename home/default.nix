@@ -4,8 +4,11 @@
   imports = [
     ./programs/bash.nix
     ./programs/git.nix
-    ../desktops/hyprland/home.nix
   ];
+
+  home.file = {
+    ".config/hypr".source = ./config/hypr;
+  };
 
   home.username = "river";
   home.homeDirectory = "/home/river";
