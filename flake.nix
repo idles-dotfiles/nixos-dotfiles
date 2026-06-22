@@ -44,7 +44,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-            home-manager.users.river = import ./home;
+            home-manager.users.river = import ./home/river;
           }
         ];
       };
