@@ -6,10 +6,10 @@
     ./disko.nix
 
     # Modules
-    ../../modules/virtualization
     ../../modules/core
-    ../../modules/networking
     ../../modules/development
+    ../../modules/networking
+    ../../modules/virtualization
   ];
 
   boot = {
