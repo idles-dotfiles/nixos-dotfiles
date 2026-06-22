@@ -18,6 +18,7 @@
     unzip
     mpv
     wl-clipboard
+    ghostty
   ];
 
   nix.gc = {
