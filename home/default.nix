@@ -9,6 +9,8 @@
   home.file = {
     ".config/hypr".source = ./config/hypr;
     ".config/tmux".source = ./config/tmux;
+    ".config/ghostty".source = ./config/ghostty;
+    ".config/nvim".source = ./config/nvim;
   };
 
   home.username = "river";
