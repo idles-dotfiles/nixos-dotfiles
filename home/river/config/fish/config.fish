@@ -23,7 +23,8 @@ alias cea="bunx create-expo-app --no-install"
 
 export PATH="$HOME/.local/bin:$PATH"
 
-set -x GPG_TTY $(tty)
+set -gx GPG_TTY (tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
 
 # OpenClaw Completion
 test -f "/home/river/.openclaw/completions/openclaw.fish"; and source "/home/river/.openclaw/completions/openclaw.fish"

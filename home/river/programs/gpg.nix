@@ -5,8 +5,12 @@
     enable = true;
     defaultCacheTtl = 1800;
     maxCacheTtl = 1800;
-    pinentry.package = pkgs.pinentry-curses;
+    pinentry.package = pkgs.pinentry-qt;
   };
+
+  services.gpg-agent.extraConfig = ''
+    pinentry-program ${pkgs.pinentry-qt}/bin/pinentry
+  '';
 
   programs.gpg = {
     enable = true;

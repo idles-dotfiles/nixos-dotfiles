@@ -35,6 +35,7 @@
     pavucontrol
     ghostty
     git-credential-manager
+    gnupg
   ];
 
   nix = {

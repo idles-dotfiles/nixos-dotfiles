@@ -8,20 +8,17 @@
         name = "Maaz Khokhar";
         email = "khokharmaaz@gmail.com";
       };
-      signing = {
-        key = "0xA8D1AEA9C92D6867"; # e.g., "0x1234567890ABCDEF"
-        signByDefault = true;
-      };
-
+      commit.gpgSign = true;
+      tag.gpgSign = true;
+      gpg.program = "${pkgs.gnupg}/bin/gpg";
+      init.defaultBranch = "main";
+      pull.rebase = true;
       credential.helper = "libsecret";
+    };
 
-      extraConfig = {
-        commit.gpgSign = true;
-        tag.gpgSign = true;
-        gpg.program = "${pkgs.gnupg}/bin/gpg";
-        init.defaultBranch = "main";
-        pull.rebase = true;
-      };
+    signing = {
+      key = "0xA8D1AEA9C92D6867";
+      signByDefault = true;
     };
   };
 

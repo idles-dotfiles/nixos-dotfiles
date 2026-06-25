@@ -5,6 +5,7 @@
   imports = [
     ./programs/bash.nix
     ./programs/git.nix
+    ./programs/gpg.nix
     ./programs/fish.nix
     ./programs/vesktop.nix
     ./programs/java.nix
