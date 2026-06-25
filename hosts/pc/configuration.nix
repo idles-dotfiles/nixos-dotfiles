@@ -54,6 +54,11 @@
     mosh
   ];
 
+  programs.nix-ld.libraries = with pkgs; [
+    brotli
+    stdenv.cc.cc.lib
+  ];
+
   systemd.network.wait-online.enable = false;
   boot.initrd.systemd.network.wait-online.enable = false;
   services.flatpak.enable = true;
