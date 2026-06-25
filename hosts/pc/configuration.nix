@@ -51,6 +51,7 @@
     xautoclick
     tsx
     slack
+    mosh
   ];
 
   systemd.network.wait-online.enable = false;

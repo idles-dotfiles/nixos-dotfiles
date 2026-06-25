@@ -1,4 +1,4 @@
-local theme = require("themes.lua")
+local theme = require("themes")
 
 hl.config({
     general = {

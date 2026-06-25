@@ -36,6 +36,7 @@
     ghostty
     git-credential-manager
     gnupg
+    yazi
   ];
 
   nix = {

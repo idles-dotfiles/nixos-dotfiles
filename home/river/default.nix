@@ -9,7 +9,6 @@
     ./programs/fish.nix
     ./programs/vesktop.nix
     ./programs/java.nix
-    #./programs/neovim.nix
   ];
 
   programs.home-manager.enable = true;

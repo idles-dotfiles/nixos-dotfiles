@@ -9,6 +9,7 @@ if status is-interactive
     alias nrs="sudo nixos-rebuild switch --flake /home/river/nixos-dotfiles#pc"
     alias config="nvim /home/river/nixos-dotfiles/hosts/pc/configuration.nix"
     alias v=nvim
+    alias y=yazi
 end
 
 function fish_greeting
