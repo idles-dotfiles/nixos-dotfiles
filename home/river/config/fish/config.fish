@@ -3,7 +3,8 @@ if status is-interactive
     zoxide init fish | source
     alias cd=z
     alias docker=podman
-    alias ls='eza --icons'
+    alias ls='/etc/profiles/per-user/river/bin/eza --icons'
+    alias cat="/etc/profiles/per-user/river/bin/bat"
     export PATH="$HOME/.npm-global/bin:$PATH"
     alias kubectx='kubectl config use-context'
     alias nrs="sudo nixos-rebuild switch --flake /home/river/nixos-dotfiles#pc"

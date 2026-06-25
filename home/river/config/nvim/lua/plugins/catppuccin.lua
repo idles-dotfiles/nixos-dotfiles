@@ -5,7 +5,7 @@ return {
     name = "catppuccin",
     priority = 1000,
     opts = {
-      flavour = "mocha", -- Choose "latte", "frappe", "macchiato", or "mocha"
+      flavour = "frappe", -- Choose "latte", "frappe", "macchiato", or "mocha"
       transparent_background = true,
       custom_highlights = function(colors)
         return {

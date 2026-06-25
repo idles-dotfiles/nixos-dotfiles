@@ -3,6 +3,6 @@ window-padding-x = 2
 font-family = "JetBrains Mono NL"
 
 #theme = Catppuccin Mocha
-theme = Harper
+theme = Argonaut
 
 font-size = 16
