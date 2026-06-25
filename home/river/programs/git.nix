@@ -3,6 +3,7 @@
 {
   programs.git = {
     enable = true;
+    package = pkgs.gitFull;
     settings = {
       user = {
         name = "Maaz Khokhar";
@@ -14,6 +15,7 @@
       init.defaultBranch = "main";
       pull.rebase = true;
       credential.helper = "libsecret";
+      push.autoSetupRemote = true;
     };
 
     signing = {

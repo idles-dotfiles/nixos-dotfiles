@@ -15,7 +15,6 @@
 
   home = {
     packages = with pkgs; [
-      git
       bash
       fish
       vesktop
