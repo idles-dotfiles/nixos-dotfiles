@@ -6,8 +6,18 @@
   ];
 
   networking = {
-    hostName = "laptop";
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      dns = "systemd-resolved";
+    };
+    extraHosts = "192.168.1.60 laptop";
+    nftables.enable = true;
+
+    nameservers = [
+      "192.168.1.193" # Pi-hole
+      "1.1.1.1" # Cloudflare
+      "1.0.0.1" # Cloudflare (Secondary)
+    ];
   };
 
   services.resolved = {
@@ -25,6 +35,4 @@
     };
 
   };
-
-  networking.nftables.enable = true;
 }

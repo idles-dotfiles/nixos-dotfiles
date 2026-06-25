@@ -1,7 +1,12 @@
 { config, ... }:
 
 {
-  services.tailscale.enable = true;
+  services.tailscale = {
+    enable = true;
+    openFirewall = true;
+    extraSetFlags = [ "--operator=river" ];
+  };
+
   networking.firewall = {
     trustedInterfaces = [ config.services.tailscale.interfaceName ];
     allowedUDPPorts = [ config.services.tailscale.port ];
@@ -13,4 +18,8 @@
 
   systemd.network.wait-online.enable = false;
   boot.initrd.systemd.network.wait-online.enable = false;
+
+  users.users.river.extraGroups = [
+    "tailscale"
+  ];
 }

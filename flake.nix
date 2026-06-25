@@ -11,40 +11,43 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
     {
-      self,
       nixpkgs,
-      disko,
       home-manager,
       ...
-    }:
+    }@inputs:
     let
       system = "x86_64-linux";
     in
     {
-      nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.pc = nixpkgs.lib.nixosSystem {
         inherit system;
-
-        specialArgs = {
-          disk = "/dev/disk/by-id/nvme-SAMSUNG_MZVLB256HBHQ-000H1_S4GNNX2RC66163";
-        };
-
+        specialArgs = { inherit inputs; };
         modules = [
-          disko.nixosModules.disko
-
-          ./hosts/laptop/disko.nix
-          ./hosts/laptop/configuration.nix
-
-          home-manager.nixosModules.home-manager
+          ./hosts/pc/configuration.nix
+          home-manager.nixosModules.default
 
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
 
-            home-manager.users.river = import ./home/river;
+              backupFileExtension = "backup";
+
+              users = {
+                river = import ./home/river;
+                aariz = import ./home/aariz;
+              };
+            };
           }
         ];
       };

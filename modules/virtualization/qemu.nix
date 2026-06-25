@@ -1,12 +1,16 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   virtualisation.spiceUSBRedirection.enable = true;
 
-  virtualisation.libvirtd = {
-    enable = true;
-    qemu = {
-      swtpm.enable = true;
+  virtualisation = {
+    containers.enable = true;
+    libvirtd = {
+      enable = true;
+      qemu = {
+        package = pkgs.qemu_kvm;
+        swtpm.enable = true;
+      };
     };
   };
 

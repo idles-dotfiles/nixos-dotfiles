@@ -19,7 +19,8 @@ return {
     file_manager = "dolphin",
     screen_shot_cmd = "hyprshot -m region -o ~/Pictures/Screenshots",
     menu = "rofi -show drun",
-    wallpaper_cmd = wallpaper_util("/home/river/Videos/Wallpapers/Wallpaper.mp4"),
+    wallpaper_cmd = wallpaper_util("/home/river/Pictures/Wallpapers/bg.png"),
+    --wallpaper_cmd = wallpaper_util("/home/river/Videos/Wallpapers/bg.mp4"),
     browser = "brave",
-    bar_cmd = "qs"
+    bar_cmd = "waybar"
 }

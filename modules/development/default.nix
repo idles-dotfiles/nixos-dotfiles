@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
@@ -10,5 +10,21 @@
     git
     neovim
     nixfmt
+    nixd
+    kubectl
+    jq
+    tmux
+    vscode
+    devenv
+    xh
+    nodejs
+  ];
+
+  # Nix LSP
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
   ];
 }
