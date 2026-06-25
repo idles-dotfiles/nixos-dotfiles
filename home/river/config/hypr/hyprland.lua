@@ -3,5 +3,6 @@ require("keybinds")
 require("monitor")
 require("decoration")
 require("general")
-require("smart-gaps")
+--require("smart-gaps")
 require("inputs")
+

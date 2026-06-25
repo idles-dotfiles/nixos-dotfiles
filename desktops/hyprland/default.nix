@@ -13,6 +13,7 @@
 
   environment.systemPackages = with pkgs; [
     hyprpolkitagent
+    hyprlock
     hyprshot
     rofi
     networkmanagerapplet
