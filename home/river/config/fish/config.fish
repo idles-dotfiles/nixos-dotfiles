@@ -6,7 +6,10 @@ if status is-interactive
     alias ls='/etc/profiles/per-user/river/bin/eza --icons'
     alias cat="/etc/profiles/per-user/river/bin/bat"
     alias grep="/etc/profiles/per-user/river/bin/rg"
+    alias idea="v ~/.idea/idea.md"
+
     export PATH="$HOME/.npm-global/bin:$PATH"
+
     alias kubectx='kubectl config use-context'
     alias nrs="sudo nixos-rebuild switch --flake /home/river/nixos-dotfiles#pc"
     alias config="nvim /home/river/nixos-dotfiles/hosts/pc/configuration.nix"
