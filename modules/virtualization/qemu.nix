@@ -14,6 +14,8 @@
     };
   };
 
+  networking.firewall.trustedInterfaces = [ "virbr0" ];
+
   programs.virt-manager.enable = true;
 
   users.users.river.extraGroups = [
