@@ -28,7 +28,6 @@
     unzip
     mpv
     wl-clipboard
-    ghostty
     wireplumber
     brightnessctl
     pulseaudio
