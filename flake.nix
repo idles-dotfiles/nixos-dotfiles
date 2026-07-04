@@ -17,6 +17,12 @@
 
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    silicate = {
+      url = "git+https://github.com/pure-sagacity/silicate";
+
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

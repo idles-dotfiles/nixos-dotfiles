@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -36,6 +36,7 @@
     git-credential-manager
     gnupg
     yazi
+    inputs.silicate.packages.${pkgs.system}.default
   ];
 
   nix = {
