@@ -36,8 +36,9 @@
     git-credential-manager
     gnupg
     yazi
-    inputs.silicate.packages.${pkgs.system}.default
     jujutsu
+    inputs.silicate.packages.${pkgs.system}.default
+    inputs.herdr.packages.${pkgs.system}.default
   ];
 
   nix = {

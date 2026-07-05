@@ -12,15 +12,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    quickshell = {
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-
+    silicate = {
+      url = "git+https://github.com/pure-sagacity/silicate";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    silicate = {
-      url = "git+https://github.com/pure-sagacity/silicate";
-
+    herdr = {
+      url = "github:ogulcancelik/herdr";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
