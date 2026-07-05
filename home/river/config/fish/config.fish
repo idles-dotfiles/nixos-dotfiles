@@ -15,6 +15,8 @@ if status is-interactive
     alias config="nvim /home/river/nixos-dotfiles/hosts/pc/configuration.nix"
     alias v=nvim
     alias y=yazi
+    alias k=kubectl
+    alias j=jj
 end
 
 function fish_greeting
