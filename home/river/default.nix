@@ -9,6 +9,7 @@
     ./programs/fish.nix
     ./programs/vesktop.nix
     ./programs/java.nix
+    ./programs/jujutsu.nix
   ];
 
   programs.home-manager.enable = true;
@@ -20,6 +21,7 @@
       vesktop
       neovim
       tmux
+      jujutsu
     ];
 
     file = {
