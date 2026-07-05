@@ -37,6 +37,7 @@
     gnupg
     yazi
     inputs.silicate.packages.${pkgs.system}.default
+    jujutsu
   ];
 
   nix = {
