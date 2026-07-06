@@ -52,6 +52,7 @@
     tsx
     slack
     mosh
+    code-cursor
   ];
 
   programs.nix-ld.libraries = with pkgs; [
