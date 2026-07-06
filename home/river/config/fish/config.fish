@@ -1,6 +1,8 @@
 if status is-interactive
     starship init fish | source
     zoxide init fish | source
+    glow completion fish | source
+
     alias cd=z
     alias docker=podman
     alias ls='/etc/profiles/per-user/river/bin/eza --icons'
