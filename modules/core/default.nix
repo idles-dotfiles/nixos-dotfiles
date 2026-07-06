@@ -1,5 +1,7 @@
 { pkgs, inputs, ... }:
-
+let
+  system = pkgs.stdenv.hostPlatform.system;
+in
 {
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
@@ -39,8 +41,8 @@
     jujutsu
     glow
 
-    inputs.silicate.packages.${pkgs.system}.default
-    inputs.herdr.packages.${pkgs.system}.default
+    inputs.silicate.packages.${system}.default
+    inputs.herdr.packages.${system}.default
   ];
 
   nix = {
