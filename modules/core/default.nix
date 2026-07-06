@@ -37,6 +37,8 @@
     gnupg
     yazi
     jujutsu
+    glow
+
     inputs.silicate.packages.${pkgs.system}.default
     inputs.herdr.packages.${pkgs.system}.default
   ];
