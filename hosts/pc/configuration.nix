@@ -54,7 +54,11 @@
     mosh
     code-cursor
     kdePackages.kdenlive
+    kdePackages.kwallet
+    kdePackages.kwallet-pam
   ];
+
+  programs.kdeconnect.enable = true;
 
   programs.nix-ld.libraries = with pkgs; [
     brotli
