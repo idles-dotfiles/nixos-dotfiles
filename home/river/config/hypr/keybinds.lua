@@ -10,7 +10,7 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(config.browser))
 
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(
-	mainMod .. " + Escape",
+	mainMod .. " + SHIFT + Escape",
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
@@ -66,4 +66,3 @@ hl.bind(
 )
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), { locked = true, repeating = true })
-
