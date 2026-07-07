@@ -6,7 +6,6 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    # General
     git
     neovim
     nixfmt
@@ -18,6 +17,7 @@
     devenv
     xh
     nodejs
+    obsidian
   ];
 
   # Nix LSP
