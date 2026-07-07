@@ -53,6 +53,7 @@
     slack
     mosh
     code-cursor
+    kdePackages.kdenlive
   ];
 
   programs.nix-ld.libraries = with pkgs; [
