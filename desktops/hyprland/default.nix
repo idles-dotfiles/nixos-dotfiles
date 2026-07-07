@@ -24,5 +24,6 @@
     waybar
     quickshell
     qt6.qtdeclarative
+    wlogout
   ];
 }
