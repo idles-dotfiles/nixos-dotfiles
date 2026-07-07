@@ -56,6 +56,8 @@
     kdePackages.kdenlive
     kdePackages.kwallet
     kdePackages.kwallet-pam
+    element-desktop
+    cmatrix
   ];
 
   programs.kdeconnect.enable = true;
