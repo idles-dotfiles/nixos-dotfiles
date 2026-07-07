@@ -1,11 +1,15 @@
 { pkgs, ... }:
 
 {
-  virtualisation.podman = {
-    enable = true;
+  virtualisation = {
+    oci-containers.backend = "podman";
+    containers.registries.search = [ "docker.io" ];
+    podman = {
+      enable = true;
 
-    dockerCompat = true;
-    defaultNetwork.settings.dns_enabled = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
   };
 
   # For rootless containers
