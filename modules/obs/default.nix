@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     gimp
     google-fonts
+    pinta
   ];
 
   programs.obs-studio = {
