@@ -1,7 +1,10 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [ gimp ];
+  environment.systemPackages = with pkgs; [
+    gimp
+    google-fonts
+  ];
 
   programs.obs-studio = {
     enable = true;
