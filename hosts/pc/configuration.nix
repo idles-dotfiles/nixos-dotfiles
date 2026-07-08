@@ -58,6 +58,7 @@
     kdePackages.kwallet-pam
     element-desktop
     cmatrix
+    rustdesk
   ];
 
   programs.kdeconnect.enable = true;
