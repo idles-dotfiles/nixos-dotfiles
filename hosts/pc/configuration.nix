@@ -59,6 +59,7 @@
     element-desktop
     cmatrix
     rustdesk
+    keyd
   ];
 
   programs.kdeconnect.enable = true;
