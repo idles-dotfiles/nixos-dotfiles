@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs; [ gimp ];
+
   programs.obs-studio = {
     enable = true;
     plugins = with pkgs.obs-studio-plugins; [

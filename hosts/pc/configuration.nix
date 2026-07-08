@@ -59,10 +59,19 @@
     element-desktop
     cmatrix
     rustdesk
-    keyd
   ];
 
   programs.kdeconnect.enable = true;
+  services.keyd = {
+    enable = true;
+    keyboards.default = {
+      ids = [ "*" ];
+      settings.main = {
+        capslock = "up";
+        up = "w";
+      };
+    };
+  };
 
   programs.nix-ld.libraries = with pkgs; [
     brotli
