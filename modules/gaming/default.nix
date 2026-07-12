@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    osu-lazer-bin # if you want
     steam
     prismlauncher
     nvtopPackages.amd
