@@ -1,17 +1,26 @@
-{ pkgs, ... }:
-
 {
-  environment.systemPackages = with pkgs; [
-    bun
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+let
+  cfg = config.workstation.development.typescript;
+in
+{
+  config = lib.mkIf cfg.enable {
+    environment.systemPackages = with pkgs; [
+      bun
+      prettier
+      eslint
+      typescript-language-server
 
-    # TS tooling (optional but common)
-    typescript
-    nodePackages.typescript-language-server
-    nodePackages.eslint
-    nodePackages.prettier
-  ];
+      # TS tooling (optional but common)
+      typescript
+    ];
 
-  environment.variables = {
-    NODE_OPTIONS = "--max-old-space-size=4096";
+    environment.variables = {
+      NODE_OPTIONS = "--max-old-space-size=4096";
+    };
   };
 }

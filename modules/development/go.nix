@@ -1,22 +1,31 @@
-{ pkgs, ... }:
-
 {
-  environment.systemPackages = with pkgs; [
-    go
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+let
+  cfg = config.workstation.development.go;
+in
+{
+  config = lib.mkIf cfg.enable {
+    environment.systemPackages = with pkgs; [
+      go
 
-    # Language server
-    gopls
+      # Language server
+      gopls
 
-    # Formatter with automatic import management
-    gotools
+      # Formatter with automatic import management
+      gotools
 
-    # Linting
-    golangci-lint
+      # Linting
+      golangci-lint
 
-    # Debugger
-    delve
+      # Debugger
+      delve
 
-    # Useful extras
-    air # Live reload for web apps
-  ];
+      # Useful extras
+      air # Live reload for web apps
+    ];
+  };
 }

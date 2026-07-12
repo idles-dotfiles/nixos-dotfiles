@@ -130,6 +130,13 @@
 
       lima.enable = true;
     };
+
+    development = {
+      enable = true;
+      rust.enable = true;
+      typescript.enable = true;
+      go.enable = true;
+    };
   };
 
   programs.nix-ld.libraries = with pkgs; [
