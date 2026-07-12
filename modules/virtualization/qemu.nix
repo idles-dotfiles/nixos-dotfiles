@@ -1,30 +1,44 @@
-{ pkgs, ... }:
-
 {
-  virtualisation.spiceUSBRedirection.enable = true;
-
-  virtualisation = {
-    containers.enable = true;
-    libvirtd = {
-      enable = true;
-      qemu = {
-        package = pkgs.qemu_kvm;
-        swtpm.enable = true;
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+let
+  cfg = config.workstation.virtualization;
+in
+{
+  config = lib.mkMerge [
+    (lib.mkIf cfg.qemu.enable {
+      virtualisation = {
+        libvirtd = {
+          enable = true;
+          qemu = {
+            package = pkgs.qemu_kvm;
+            swtpm.enable = true;
+          };
+        };
       };
-    };
-  };
+      users.users.${cfg.user}.extraGroups = [
+        "libvirtd"
+        "kvm"
+      ];
+    })
 
-  networking.firewall.trustedInterfaces = [ "virbr0" ];
+    (lib.mkIf cfg.qemu.spiceUSBRedirection {
+      virtualisation.spiceUSBRedirection.enable = true;
+    })
 
-  programs.virt-manager.enable = true;
+    (lib.mkIf cfg.qemu.virtManager {
+      programs.virt-manager.enable = true;
+    })
 
-  users.users.river.extraGroups = [
-    "libvirtd"
-    "kvm"
-  ];
+    (lib.mkIf (cfg.qemu.enable && cfg.qemu.containers) {
+      virtualisation.containers.enable = true;
+    })
 
-  boot.kernelModules = [
-    "kvm-intel"
-    "kvm-amd"
+    (lib.mkIf cfg.qemu.enable {
+      boot.kernelModules = cfg.qemu.bootModules;
+    })
   ];
 }

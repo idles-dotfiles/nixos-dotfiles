@@ -1,17 +1,14 @@
-{ ... }:
-
+{ config, ... }:
+let
+  cfg = config.workstation.networking.core.firewall;
+in
 {
   networking.firewall = {
     enable = true;
 
-    allowPing = true;
+    allowPing = cfg.allowPing;
 
-    allowedTCPPorts = [
-      22
-      80
-    ];
-    allowedUDPPorts = [
-      53
-    ];
+    allowedTCPPorts = cfg.ports.tcp;
+    allowedUDPPorts = cfg.ports.udp;
   };
 }

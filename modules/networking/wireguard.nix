@@ -1,22 +1,21 @@
-{ ... }:
-
+{ config, lib, ... }:
+let
+  cfg = config.workstation.networking.wireguard;
+in
 {
-  networking.wireguard.interfaces = {
-    wg0 = {
-      ips = [ "10.0.0.2/24" ];
-      privateKeyFile = "/etc/wireguard/private.key"; # Keep secrets out of the nix store!
+  config = lib.mkIf cfg.enable {
+    networking.wg-quick.interfaces = lib.mapAttrs (name: iface: {
+      address = iface.address;
+      privateKeyFile = iface.privateKeyFile;
+      peers = map (p: {
+        publicKey = p.publicKey;
+        allowedIPs = p.allowedIPs;
+        endpoint = p.endpoint;
 
-      peers = [
-        {
-          publicKey = "vUUL4CD+1Sa2U2SZYa2P9IoFC2HxEr+PYNmYfRE8wwY=";
-          allowedIPs = [ "0.0.0.0/0" ];
-          endpoint = "server.maariz.org:51820";
-          persistentKeepalive = 25;
-        }
-      ];
-    };
+        persistentKeepalive = if p.persistentKeepalive != null then p.persistentKeepalive else null;
+      }) iface.peers;
+    }) (lib.filterAttrs (_: v: v.enable) cfg.interfaces);
+
+    networking.firewall.allowedUDPPorts = [ 51820 ];
   };
-
-  # Ensure the Wireguard UDP port is open if you are hosting the server
-  networking.firewall.allowedUDPPorts = [ 51820 ];
 }

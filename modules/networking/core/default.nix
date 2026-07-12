@@ -1,38 +1,38 @@
-{ ... }:
-
+{ config, lib, ... }:
+let
+  cfg = config.workstation.networking.core;
+in
 {
   imports = [
     ./firewall.nix
   ];
 
-  networking = {
-    networkmanager = {
+  config = {
+    networking = {
+      networkmanager = {
+        enable = true;
+        dns = "systemd-resolved";
+      };
+
+      extraHosts = lib.concatMapStringsSep "\n" (
+        host: "${host.ip_address} ${host.hostname}"
+      ) cfg.extraHosts;
+
+      nftables.enable = true;
+
+      nameservers = cfg.nameservers;
+    };
+
+    services.resolved = {
       enable = true;
-      dns = "systemd-resolved";
+
+      settings.Resolve = {
+        dnssec = "true";
+        DNSOverTLS = "true";
+        domains = [ "~." ];
+        fallbackDns = cfg.nameservers;
+      };
+
     };
-    extraHosts = "192.168.1.60 laptop";
-    nftables.enable = true;
-
-    nameservers = [
-      "192.168.1.193" # Pi-hole
-      "1.1.1.1" # Cloudflare
-      "1.0.0.1" # Cloudflare (Secondary)
-    ];
-  };
-
-  services.resolved = {
-    enable = true;
-
-    settings.Resolve = {
-      dnssec = "true";
-      DNSOverTLS = "true";
-      domains = [ "~." ];
-      fallbackDns = [
-        "192.168.1.193" # Pi-hole
-        "1.1.1.1" # Cloudflare
-        "1.0.0.1" # Cloudflare (Secondary)
-      ];
-    };
-
   };
 }

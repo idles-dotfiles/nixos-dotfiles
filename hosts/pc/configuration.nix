@@ -27,11 +27,6 @@
     ../../desktops/hyprland
   ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  networking.hostName = "nixos";
-
   environment.systemPackages = with pkgs; [
     libsecret
     tree
@@ -63,6 +58,7 @@
   ];
 
   programs.kdeconnect.enable = true;
+
   services.keyd = {
     enable = false;
     keyboards.default = {
@@ -71,6 +67,68 @@
         capslock = "up";
         up = "w";
       };
+    };
+  };
+
+  workstation = {
+    core = {
+      kernel = "latest";
+      allowUnfree = true;
+      ssh.permitRootLogin = true;
+
+      user = {
+        name = "river";
+        fullName = "Maaz Khokhar";
+        shell = "fish";
+      };
+    };
+
+    networking = {
+      core = {
+        firewall = {
+          allowPing = true;
+          ports.tcp = [
+            22
+            80
+            5900
+            16570
+            18789
+          ];
+        };
+        extraHosts = [
+          {
+            ip_address = "192.168.1.60";
+            hostname = "laptop";
+          }
+        ];
+        nameservers = [
+          "192.168.1.193"
+          "1.1.1.1"
+          "1.0.0.1"
+        ];
+      };
+      tailscale.enable = true;
+    };
+
+    virtualization = {
+      user = "river";
+
+      qemu = {
+        enable = true;
+        containers = true;
+        spiceUSBRedirection = true;
+        virtManager = true;
+        bootModules = [
+          "kvm-amd"
+        ];
+      };
+
+      podman = {
+        enable = true;
+        packages.enable = true;
+      };
+
+      lima.enable = true;
     };
   };
 
@@ -93,6 +151,4 @@
     enableAllFirmware = true;
     enableRedistributableFirmware = true;
   };
-
-  system.stateVersion = "25.11";
 }

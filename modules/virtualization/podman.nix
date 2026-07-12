@@ -1,42 +1,55 @@
-{ pkgs, ... }:
-
 {
-  virtualisation = {
-    oci-containers.backend = "podman";
-    containers.registries.search = [ "docker.io" ];
-    podman = {
-      enable = true;
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+let
+  cfg = config.workstation.virtualization;
+in
+{
+  config = lib.mkMerge [
+    (lib.mkIf cfg.podman.enable {
+      virtualisation = {
+        oci-containers.backend = "podman";
+        podman = {
 
-      dockerCompat = true;
-      defaultNetwork.settings.dns_enabled = true;
-    };
-  };
+          enable = true;
 
-  # For rootless containers
-  security.unprivilegedUsernsClone = true;
+          dockerCompat = true;
+          defaultNetwork.settings.dns_enabled = true;
+        };
+      };
 
-  users.users.river = {
-    subUidRanges = [
-      {
-        startUid = 100000;
-        count = 65536;
-      }
-    ];
-    subGidRanges = [
-      {
-        startGid = 100000;
-        count = 65536;
-      }
-    ];
+      # For rootless containers
+      security.unprivilegedUsernsClone = true;
 
-    extraGroups = [
-      "podman"
-    ];
-  };
+      users.users.${cfg.user} = {
+        subUidRanges = [
+          {
+            startUid = 100000;
+            count = 65536;
+          }
+        ];
+        subGidRanges = [
+          {
+            startGid = 100000;
+            count = 65536;
+          }
+        ];
 
-  environment.systemPackages = with pkgs; [
-    podman
-    podman-compose
-    podman-desktop
+        extraGroups = [
+          "podman"
+        ];
+      };
+    })
+
+    (lib.mkIf cfg.podman.packages.enable {
+      environment.systemPackages = with pkgs; [
+        podman
+        podman-compose
+        podman-desktop
+      ];
+    })
   ];
 }
