@@ -12,13 +12,23 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    silicate = {
-      url = "git+https://github.com/pure-sagacity/silicate";
+    herdr = {
+      url = "github:ogulcancelik/herdr";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    herdr = {
-      url = "github:ogulcancelik/herdr";
+    fast = {
+      url = "github:GitanElyon/fast";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    silicate = {
+      url = "github:pure-sagacity/silicate";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    clonee = {
+      url = "git+https://gitea.maariz.org/pure_sagacity/clonee";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

@@ -1,4 +1,5 @@
 {
+  inputs,
   config,
   pkgs,
   shared,
@@ -6,6 +7,7 @@
 }:
 let
   cfg = config.workstation.core;
+  system = pkgs.stdenv.hostPlatform.system;
   allowRootSSH = if cfg.ssh.permitRootLogin then "yes" else "no";
 in
 {
@@ -44,8 +46,25 @@ in
     environment.systemPackages = with pkgs; [
       gitFull
       neovim
+      btop
+      unzip
+      mpv
+      wl-clipboard
+      wireplumber
+      brightnessctl
+      pulseaudio
+      pavucontrol
+      ghostty
       git-credential-manager
       gnupg
+      yazi
+      jujutsu
+      glow
+
+      inputs.silicate.packages.${system}.default
+      inputs.herdr.packages.${system}.default
+      inputs.fast.packages.${system}.default
+      inputs.clonee.packages.${system}.default
     ];
 
     nix = {
