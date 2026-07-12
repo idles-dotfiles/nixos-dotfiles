@@ -18,6 +18,7 @@
     ../../modules/ollama
     ../../modules/development
     ../../modules/development/claude.nix
+    ../../modules/development/go.nix
     ../../modules/additionalUsers/aariz.nix
     ../../modules/obs
 
