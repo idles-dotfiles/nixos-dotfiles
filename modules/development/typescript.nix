@@ -17,6 +17,9 @@ in
 
       # TS tooling (optional but common)
       typescript
+
+      # API Client
+      bruno
     ];
 
     environment.variables = {
