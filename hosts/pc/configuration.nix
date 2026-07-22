@@ -136,6 +136,7 @@
       rust.enable = true;
       typescript.enable = true;
       go.enable = true;
+      unity.enable = true;
     };
   };
 

@@ -1,0 +1,16 @@
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+let
+  cfg = config.workstation.development.unity;
+in
+{
+  config = lib.mkIf cfg.enable {
+    environment.systemPackages = with pkgs; [
+      unityhub
+    ];
+  };
+}

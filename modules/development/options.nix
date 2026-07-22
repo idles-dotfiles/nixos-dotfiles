@@ -26,5 +26,9 @@
     typescript = {
       enable = lib.mkEnableOption "the typescript toolkit";
     };
+
+    unity = {
+      enable = lib.mkEnableOption "the unity toolkit";
+    };
   };
 }

@@ -10,6 +10,7 @@
     ./options.nix
     ./python.nix
     ./typescript.nix
+    ./unity.nix
   ];
 
 }
