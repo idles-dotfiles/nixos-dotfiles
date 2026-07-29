@@ -55,6 +55,7 @@
     element-desktop
     cmatrix
     rustdesk
+    wine64Packages.waylandFull
   ];
 
   programs.kdeconnect.enable = true;

@@ -23,6 +23,7 @@ in
       xh
       nodejs
       obsidian
+      zed-editor
     ];
 
     # Nix LSP
