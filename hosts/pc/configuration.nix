@@ -61,12 +61,15 @@
   programs.kdeconnect.enable = true;
 
   services.keyd = {
-    enable = false;
+    enable = true;
+
     keyboards.default = {
       ids = [ "*" ];
-      settings.main = {
-        capslock = "up";
-        up = "w";
+
+      settings = {
+        main = {
+          right = "w";
+        };
       };
     };
   };
