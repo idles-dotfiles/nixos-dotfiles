@@ -2,7 +2,9 @@ window-padding-x = 2
 
 font-family = "JetBrains Mono NL"
 
-#theme = Catppuccin Mocha
 theme = Argonaut
 
 font-size = 16
+
+background-opacity = 0.8
+background-blur = true

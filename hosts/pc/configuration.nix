@@ -61,7 +61,7 @@
   programs.kdeconnect.enable = true;
 
   services.keyd = {
-    enable = true;
+    enable = false;
 
     keyboards.default = {
       ids = [ "*" ];
