@@ -32,7 +32,6 @@
     tree
     libxtst
     usbutils
-    brave
     pciutils
     stow
     termius

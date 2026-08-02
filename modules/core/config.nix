@@ -65,6 +65,7 @@ in
       inputs.herdr.packages.${system}.default
       inputs.fast.packages.${system}.default
       inputs.clonee.packages.${system}.default
+      inputs.helium.packages.${system}.default
     ];
 
     nix = {

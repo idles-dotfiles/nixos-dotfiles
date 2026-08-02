@@ -14,6 +14,6 @@ return {
 	screen_shot_cmd = "hyprshot -m region -o ~/Pictures/Screenshots",
 	menu = "rofi -show drun",
 	wallpaper_cmd = wallpaper_util("/home/river/Pictures/Wallpapers/bg.png"),
-	browser = "brave",
+	browser = "helium",
 	bar_cmd = "waybar",
 }

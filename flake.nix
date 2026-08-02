@@ -31,6 +31,11 @@
       url = "git+https://gitea.maariz.org/pure_sagacity/clonee";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    helium = {
+      url = "github:AlvaroParker/helium-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
