@@ -21,6 +21,7 @@
     ../../modules/development/go.nix
     ../../modules/additionalUsers/aariz.nix
     ../../modules/obs
+    ../../modules/bitwarden
 
     # Desktop
     ../../desktops/plasma
@@ -141,6 +142,8 @@
       go.enable = true;
       unity.enable = false;
     };
+
+    bitwarden.enable = true;
   };
 
   programs.nix-ld.libraries = with pkgs; [
