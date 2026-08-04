@@ -44,7 +44,7 @@
     pass
     pinentry-curses
     github-copilot-cli
-    xautoclick
+    xclicker
     tsx
     slack
     mosh
