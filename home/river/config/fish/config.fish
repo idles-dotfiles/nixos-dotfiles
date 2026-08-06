@@ -40,3 +40,5 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 test -f "/home/river/.openclaw/completions/openclaw.fish"; and source "/home/river/.openclaw/completions/openclaw.fish"
 
 set -gx CLAUDE_CODE_MAX_OUTPUT_TOKENS 64000
+
+set -gx TERM xterm-256color
