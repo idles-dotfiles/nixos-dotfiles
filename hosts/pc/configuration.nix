@@ -140,7 +140,10 @@
       rust.enable = true;
       typescript.enable = true;
       go.enable = true;
-      unity.enable = false;
+      engines = {
+        unity.enable = false;
+        robloxstudio.enable = true;
+      };
     };
 
     bitwarden.enable = true;

@@ -27,8 +27,13 @@
       enable = lib.mkEnableOption "the typescript toolkit";
     };
 
-    unity = {
-      enable = lib.mkEnableOption "the unity toolkit";
+    engines = {
+      unity = {
+        enable = lib.mkEnableOption "the unity toolkit";
+      };
+      robloxstudio = {
+        enable = lib.mkEnableOption "the roblox studio toolkit";
+      };
     };
   };
 }
