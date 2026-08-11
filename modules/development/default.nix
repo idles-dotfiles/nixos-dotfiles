@@ -11,6 +11,7 @@
     ./python.nix
     ./typescript.nix
     ./unity.nix
+    ./robloxstudio.nix
   ];
 
 }
