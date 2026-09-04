@@ -22,6 +22,7 @@
     ../../modules/additionalUsers/aariz.nix
     ../../modules/obs
     ../../modules/bitwarden
+    ../../modules/music
 
     # Desktop
     ../../desktops/plasma
@@ -147,8 +148,8 @@
     };
 
     bitwarden.enable = true;
+    music.enable = true;
   };
-
   programs.nix-ld.libraries = with pkgs; [
     brotli
     stdenv.cc.cc.lib

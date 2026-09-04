@@ -13,7 +13,7 @@ if status is-interactive
     export PATH="$HOME/.npm-global/bin:$PATH"
 
     alias kubectx='kubectl config use-context'
-    alias nrs="sudo nixos-rebuild switch --flake /home/river/nixos-dotfiles#pc"
+    alias nrs='sudo nixos-rebuild switch --flake /home/river/nixos-dotfiles#pc'
     alias config="nvim /home/river/nixos-dotfiles/hosts/pc/configuration.nix"
     alias v=nvim
     alias y=yazi

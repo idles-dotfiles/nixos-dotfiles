@@ -806,7 +806,8 @@
         "herdr": "herdr",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2",
-        "silicate": "silicate"
+        "silicate": "silicate",
+        "sonora": "sonora"
       }
     },
     "rust-analyzer-src": {
@@ -908,6 +909,27 @@
         "type": "github"
       }
     },
+    "rust-overlay_4": {
+      "inputs": {
+        "nixpkgs": [
+          "sonora",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788419040,
+        "narHash": "sha256-Itdv4WV5z+U0VpseZ/f4uvYmULVPxsV3Hc2l9HrCyY4=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "1af4dd0db58d4adde06f0840ce28da90f9c66c50",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
     "silicate": {
       "inputs": {
         "devenv": "devenv_2",
@@ -927,6 +949,27 @@
       "original": {
         "owner": "pure-sagacity",
         "repo": "silicate",
+        "type": "github"
+      }
+    },
+    "sonora": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay_4"
+      },
+      "locked": {
+        "lastModified": 1788469366,
+        "narHash": "sha256-qX886xPYCOK2L99wHz08uGd9We82AqTLBQmBJYCE0ok=",
+        "owner": "idle-river",
+        "repo": "sonora",
+        "rev": "9d18fb622fc53368185ccd18e82a42b65839f3ee",
+        "type": "github"
+      },
+      "original": {
+        "owner": "idle-river",
+        "repo": "sonora",
         "type": "github"
       }
     },

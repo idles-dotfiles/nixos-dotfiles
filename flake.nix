@@ -36,6 +36,11 @@
       url = "github:AlvaroParker/helium-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    sonora = {
+      url = "github:idle-river/sonora";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
