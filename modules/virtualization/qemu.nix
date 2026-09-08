@@ -23,6 +23,7 @@ in
         "libvirtd"
         "kvm"
       ];
+      networking.firewall.trustedInterfaces = [ "virbr0" ];
     })
 
     (lib.mkIf cfg.qemu.spiceUSBRedirection {
