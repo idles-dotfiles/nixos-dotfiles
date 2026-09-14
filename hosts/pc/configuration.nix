@@ -57,6 +57,7 @@
     cmatrix
     rustdesk
     wine64Packages.waylandFull
+    aria2
   ];
 
   programs.kdeconnect.enable = true;
