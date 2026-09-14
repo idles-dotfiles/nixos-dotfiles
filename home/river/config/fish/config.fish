@@ -19,6 +19,7 @@ if status is-interactive
     alias y=yazi
     alias k=kubectl
     alias j=jj
+    alias aria=aria2c
 end
 
 function fish_greeting
