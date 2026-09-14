@@ -58,6 +58,7 @@
     rustdesk
     wine64Packages.waylandFull
     aria2
+    komikku
   ];
 
   programs.kdeconnect.enable = true;
