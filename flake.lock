@@ -83,17 +83,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1783739292,
-        "narHash": "sha256-4Q15SKZFttcCqnD1MC/qQCqA/L/QqqtN7d9iyMz+ld0=",
-        "ref": "refs/heads/main",
-        "rev": "378c1f7c0d1c004d504ad8496d136ec381688f10",
-        "revCount": 9,
-        "type": "git",
-        "url": "https://gitea.maariz.org/pure_sagacity/clonee"
+        "lastModified": 1786859387,
+        "narHash": "sha256-hKML6YK+D8zI4SX+/uN/4x8Wn5q/lmOjEG2fvZgMfIA=",
+        "owner": "idle-river",
+        "repo": "clonee",
+        "rev": "ed6a0f80c3e48056090c1052e71c038a3e3800e2",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "https://gitea.maariz.org/pure_sagacity/clonee"
+        "owner": "idle-river",
+        "repo": "clonee",
+        "type": "github"
       }
     },
     "crate2nix": {
@@ -524,11 +524,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786178667,
-        "narHash": "sha256-JTT7z91LyshmN8NH0OaPdPvtvQ53V5vp4jUPLuL+1BM=",
+        "lastModified": 1789203886,
+        "narHash": "sha256-cT5qkSbSGx/nNcaKGsvIciIyl04KZEiFHAEkOsC7dSw=",
         "owner": "AlvaroParker",
         "repo": "helium-nix",
-        "rev": "bcfc0edcc524ffd6a378e339ecaf4f312ea346ad",
+        "rev": "71bd9ed7f3c3f62c550d1571b16d65420cbbc65b",
         "type": "github"
       },
       "original": {
@@ -545,11 +545,11 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1786460931,
-        "narHash": "sha256-Q/YchVrIR7aZg8bljZSTh58LD4JW/thgiDmEXxQLP5A=",
+        "lastModified": 1789347353,
+        "narHash": "sha256-jQOc9DXCtJPefRvzHw7yGVk2upx7rfpA4aiFiYvdeO0=",
         "owner": "ogulcancelik",
         "repo": "herdr",
-        "rev": "06ca0baa12f4203c5bbad9ecadf53f9a475a52b2",
+        "rev": "c77af1892ff121736ecb103b32d504d6f1b31805",
         "type": "github"
       },
       "original": {
@@ -565,11 +565,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786356609,
-        "narHash": "sha256-ou8fYz5w9yhXC8YbvvExybFIa19MyW5G/8dEPqa90hM=",
+        "lastModified": 1789352311,
+        "narHash": "sha256-E9hlcRNSRQ1vb+UicOusX/ucroGlBAz/pYhCBorLOn4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "c30c7955cec30d664a9baced6bc0112e263d4647",
+        "rev": "cfcda3f99334c8459fa4cd46cce87502e0b48f0a",
         "type": "github"
       },
       "original": {
@@ -785,11 +785,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1786247143,
-        "narHash": "sha256-qemNveuexlWhK0Qc6Y8o+gtSVTIj5xljzTAXQZxTHWA=",
-        "rev": "279b4a8275f032c566576b3f181fa0f27197f588",
+        "lastModified": 1789149629,
+        "narHash": "sha256-eQUZVehWLDBbpBR2rq6DnuRee1ULT6Y675RhsYDSjYI=",
+        "rev": "eaad089433ca2bb662274377d33df3d0e51ef28b",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1050399.279b4a8275f0/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1072397.eaad089433ca/nixexprs.tar.xz"
       },
       "original": {
         "id": "nixpkgs",
@@ -941,13 +941,13 @@
       "locked": {
         "lastModified": 1785303767,
         "narHash": "sha256-nU9EO9rKMm4FVjFIlkkwqGoikdd/6iYhGR3FM1Ddvuo=",
-        "owner": "pure-sagacity",
+        "owner": "idle-river",
         "repo": "silicate",
         "rev": "4421810236975818cfeaa10bcb79ca88521452e3",
         "type": "github"
       },
       "original": {
-        "owner": "pure-sagacity",
+        "owner": "idle-river",
         "repo": "silicate",
         "type": "github"
       }
@@ -960,15 +960,15 @@
         "rust-overlay": "rust-overlay_4"
       },
       "locked": {
-        "lastModified": 1788469366,
-        "narHash": "sha256-qX886xPYCOK2L99wHz08uGd9We82AqTLBQmBJYCE0ok=",
-        "owner": "idle-river",
+        "lastModified": 1789343444,
+        "narHash": "sha256-PkmenEsW4JlRyO0Ex8+4/zTDv2VID8UhQvfgDt2Obe0=",
+        "owner": "sonorahq",
         "repo": "sonora",
-        "rev": "9d18fb622fc53368185ccd18e82a42b65839f3ee",
+        "rev": "7f0a18c2188ec11e06422c9ebb03d6a64f47d3ee",
         "type": "github"
       },
       "original": {
-        "owner": "idle-river",
+        "owner": "sonorahq",
         "repo": "sonora",
         "type": "github"
       }

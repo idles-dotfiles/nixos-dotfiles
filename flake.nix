@@ -23,12 +23,12 @@
     };
 
     silicate = {
-      url = "github:pure-sagacity/silicate";
+      url = "github:idle-river/silicate";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     clonee = {
-      url = "git+https://gitea.maariz.org/pure_sagacity/clonee";
+      url = "github:idle-river/clonee";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -38,7 +38,7 @@
     };
 
     sonora = {
-      url = "github:idle-river/sonora";
+      url = "github:sonorahq/sonora";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

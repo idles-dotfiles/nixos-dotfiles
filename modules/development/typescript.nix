@@ -17,7 +17,6 @@ in
 
       # TS tooling (optional but common)
       typescript
-      typescript-go
 
       # API Client
       bruno

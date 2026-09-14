@@ -22,7 +22,7 @@ in
       };
 
       # For rootless containers
-      security.unprivilegedUsernsClone = true;
+      boot.kernel.sysctl."user.max_user_namespaces" = 28633;
 
       users.users.${cfg.user} = {
         subUidRanges = [
