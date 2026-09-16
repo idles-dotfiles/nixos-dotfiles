@@ -142,7 +142,8 @@
       enable = true;
       rust.enable = true;
       typescript.enable = true;
-      go.enable = true;
+      go.enable = false;
+      python.enable = true;
       engines = {
         unity.enable = false;
         robloxstudio.enable = true;
