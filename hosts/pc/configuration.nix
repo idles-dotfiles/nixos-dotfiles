@@ -147,6 +147,7 @@
         unity.enable = false;
         robloxstudio.enable = true;
       };
+      claude.enable = true;
     };
 
     bitwarden.enable = true;
