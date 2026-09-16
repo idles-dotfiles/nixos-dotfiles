@@ -5,7 +5,7 @@ if status is-interactive
 
     alias cd=z
     alias docker=podman
-    alias ls='/etc/profiles/per-user/river/bin/eza --icons'
+    alias ls='/etc/profiles/per-user/river/bin/eza --icons auto'
     alias cat="/etc/profiles/per-user/river/bin/bat"
     alias grep="/etc/profiles/per-user/river/bin/rg"
     alias idea="v ~/.idea/idea.md"
