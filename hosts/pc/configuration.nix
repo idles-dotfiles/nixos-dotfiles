@@ -151,6 +151,11 @@
       claude.enable = true;
     };
 
+    gaming = {
+      enable = true;
+      macro.enable = true;
+    };
+
     bitwarden.enable = true;
     music.enable = true;
   };
