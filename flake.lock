@@ -807,7 +807,8 @@
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2",
         "silicate": "silicate",
-        "sonora": "sonora"
+        "sonora": "sonora",
+        "vice": "vice"
       }
     },
     "rust-analyzer-src": {
@@ -1046,6 +1047,27 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "vice": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1790110715,
+        "narHash": "sha256-+UY2YK+oMnGyvPFN+mwf8W9jrCFTQES6VAhkBDnNXLc=",
+        "owner": "UMCEKO",
+        "repo": "Vice",
+        "rev": "3c095ee36d9b177ec53b71fc93642960dcf04b1b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "UMCEKO",
+        "ref": "nix-support",
+        "repo": "Vice",
         "type": "github"
       }
     }

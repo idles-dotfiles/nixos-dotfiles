@@ -77,6 +77,8 @@
     };
   };
 
+  services.vice.enable = true;
+
   workstation = {
     core = {
       kernel = "latest";

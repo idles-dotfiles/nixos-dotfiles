@@ -41,12 +41,18 @@
       url = "github:sonorahq/sonora";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    vice = {
+      url = "github:UMCEKO/Vice/nix-support";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
     {
       nixpkgs,
       home-manager,
+      vice,
       ...
     }@inputs:
     let
@@ -58,7 +64,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/pc/configuration.nix
-
+          vice.nixosModules.default
           home-manager.nixosModules.default
           {
             home-manager = {
