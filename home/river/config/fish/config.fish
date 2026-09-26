@@ -42,4 +42,6 @@ test -f "/home/river/.openclaw/completions/openclaw.fish"; and source "/home/riv
 
 set -gx CLAUDE_CODE_MAX_OUTPUT_TOKENS 64000
 
+set -gx EDITOR nvim
+
 set -gx TERM xterm-256color
