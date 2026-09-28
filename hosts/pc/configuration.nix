@@ -23,6 +23,7 @@
     ../../modules/obs
     ../../modules/bitwarden
     ../../modules/music
+    ../../modules/sunshine
 
     # Desktop
     ../../desktops/plasma
