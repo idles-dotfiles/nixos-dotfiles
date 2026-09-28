@@ -55,7 +55,7 @@
     kdePackages.kwallet-pam
     element-desktop
     cmatrix
-    rustdesk
+    rustdesk-flutter
     wine64Packages.waylandFull
     aria2
     komikku
