@@ -60,6 +60,7 @@
     wine64Packages.waylandFull
     aria2
     komikku
+    github-cli
   ];
 
   programs.kdeconnect.enable = true;
