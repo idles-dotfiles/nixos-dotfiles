@@ -43,7 +43,7 @@
     };
 
     vice = {
-      url = "github:UMCEKO/Vice/nix-support";
+      url = "github:eklonofficial/Vice";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

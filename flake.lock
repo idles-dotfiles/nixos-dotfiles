@@ -524,11 +524,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1790256159,
-        "narHash": "sha256-v8RBD+zfulf4yivs8HnAaoL6vrG0Ii1hxoYhaWw/Niw=",
+        "lastModified": 1791111688,
+        "narHash": "sha256-915Ghhr9ggrJoNY2Td5zEz3ZLQJageAhWG5yxgsj4xQ=",
         "owner": "AlvaroParker",
         "repo": "helium-nix",
-        "rev": "29230f5b149fc208e62b65c62c8d2d8d1c1902c2",
+        "rev": "9f8cab4e5aece0eb59e72ed1299186cad1b36614",
         "type": "github"
       },
       "original": {
@@ -545,11 +545,11 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1790456789,
-        "narHash": "sha256-IwMxQ3JjBI3rJ4Fz02cD9pjSUeoRNy4OFXn+ppDZMiM=",
+        "lastModified": 1791128034,
+        "narHash": "sha256-3X3G75QuJcSTc3x2iblKZJgXUSrSWa9BlkybqlGm5Bw=",
         "owner": "ogulcancelik",
         "repo": "herdr",
-        "rev": "fff6c820aa45f4eabb9b2e0456326dc74cca5a25",
+        "rev": "e35f3937b0efe40ec0dab675709c68e1d8e8c9e6",
         "type": "github"
       },
       "original": {
@@ -565,11 +565,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1790365885,
-        "narHash": "sha256-iQ0ebhiVo64NktTnwft9hNxlFu4j5cvljVxyJaEVIP4=",
+        "lastModified": 1791153770,
+        "narHash": "sha256-+IqnyJotwLNMkhyqa3F3YtX58W2HrUBqRz++RGt42SM=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "7b4c5ec4bedaf1e062bbc1bcaeddbc6bd242aa1b",
+        "rev": "6807ee9587ecc28f7f05509e2043d68efa7fe0f4",
         "type": "github"
       },
       "original": {
@@ -785,11 +785,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1790323409,
-        "narHash": "sha256-m4DGo58Fza5ImOegtWOeE18nhpSO1IGzsVA6Lpsb4zw=",
-        "rev": "e94cb152ed51bd6e24eb4a41f1460252beb52cd2",
+        "lastModified": 1791048980,
+        "narHash": "sha256-u3KCLxsnf1622GdFccg8hmkEIutOZ1h4pvia5ERjIuI=",
+        "rev": "a7868a727837f3c09cee2ce0ca671c76b1589fed",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1079315.e94cb152ed51/nixexprs.tar.zst"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1084968.a7868a727837/nixexprs.tar.zst"
       },
       "original": {
         "id": "nixpkgs",
@@ -940,11 +940,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785303767,
-        "narHash": "sha256-nU9EO9rKMm4FVjFIlkkwqGoikdd/6iYhGR3FM1Ddvuo=",
+        "lastModified": 1790956743,
+        "narHash": "sha256-aByikHQhFFJKaDFNmJO/nXWZ3jVAgW2oW0jRRzCH5dc=",
         "owner": "idle-river",
         "repo": "silicate",
-        "rev": "4421810236975818cfeaa10bcb79ca88521452e3",
+        "rev": "a39ef05ba5e9311491e0cbec5fdf2d1292063d8e",
         "type": "github"
       },
       "original": {
@@ -961,11 +961,11 @@
         "rust-overlay": "rust-overlay_4"
       },
       "locked": {
-        "lastModified": 1790362344,
-        "narHash": "sha256-Y2vaIbopi/poBboWCxYyF+1X6dAI9D/rQhUmMEFP3hs=",
+        "lastModified": 1790968365,
+        "narHash": "sha256-RDh/GgVwYk1C10ZlalX0GwYHxlb4Jrab5Wob3sNyNWk=",
         "owner": "sonorahq",
         "repo": "sonora",
-        "rev": "b135b9c66d5bfc59d00752dfd3a2cd821c6c24af",
+        "rev": "9f6567874582749b675a59ee705a8447191da6b6",
         "type": "github"
       },
       "original": {
@@ -1057,16 +1057,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1790110715,
-        "narHash": "sha256-+UY2YK+oMnGyvPFN+mwf8W9jrCFTQES6VAhkBDnNXLc=",
-        "owner": "UMCEKO",
+        "lastModified": 1791139994,
+        "narHash": "sha256-E2qouvMR+9YWmr0EUYP5qDT8OTKH/TaUtJvPKdU78e4=",
+        "owner": "eklonofficial",
         "repo": "Vice",
-        "rev": "3c095ee36d9b177ec53b71fc93642960dcf04b1b",
+        "rev": "4cdc88113cd19c82d5d0a1992f9aa5f454b58bad",
         "type": "github"
       },
       "original": {
-        "owner": "UMCEKO",
-        "ref": "nix-support",
+        "owner": "eklonofficial",
         "repo": "Vice",
         "type": "github"
       }

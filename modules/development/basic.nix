@@ -18,7 +18,6 @@ in
       kubectl
       jq
       tmux
-      vscode
       devenv
       xh
       nodejs
