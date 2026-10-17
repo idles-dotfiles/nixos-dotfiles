@@ -808,6 +808,7 @@
         "nixpkgs": "nixpkgs_2",
         "silicate": "silicate",
         "sonora": "sonora",
+        "terrax": "terrax",
         "vice": "vice"
       }
     },
@@ -1001,6 +1002,26 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "terrax": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791028558,
+        "narHash": "sha256-IWu6e/cgqrCcNhox958f4PpR5n9ipY45P2CLibrMjfY=",
+        "owner": "crynta",
+        "repo": "terax-ai",
+        "rev": "3301de2012efff6b4d550b5732be7c329124561c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "crynta",
+        "repo": "terax-ai",
         "type": "github"
       }
     },

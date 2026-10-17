@@ -31,11 +31,6 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    libsecret
-    tree
-    libxtst
-    usbutils
-    pciutils
     stow
     termius
     kdePackages.partitionmanager
@@ -43,11 +38,9 @@
     fastfetch
     localsend
     nvtopPackages.amd
-    pass
     pinentry-curses
     github-copilot-cli
     xclicker
-    tsx
     slack
     mosh
     code-cursor
@@ -59,7 +52,6 @@
     rustdesk-flutter
     wine64Packages.waylandFull
     aria2
-    komikku
     github-cli
   ];
 
@@ -114,8 +106,6 @@
         ];
         nameservers = [
           "192.168.1.58"
-          "1.1.1.1"
-          "1.0.0.1"
         ];
       };
       tailscale.enable = true;
