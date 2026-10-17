@@ -14,10 +14,11 @@ if status is-interactive
 
     alias kubectx='kubectl config use-context'
     alias nrs='sudo nixos-rebuild switch --flake /home/river/nixos-dotfiles#pc'
-    alias update='nix flake update /home/river/nixos-dotfiles'
+    alias update='nix flake update --flake /home/river/nixos-dotfiles'
     alias upgrade='update && nrs'
     alias clean='sudo nix-collect-garbage -d'
     alias config="nvim /home/river/nixos-dotfiles/hosts/pc/configuration.nix"
+
     alias v=nvim
     alias y=yazi
     alias k=kubectl
