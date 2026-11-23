@@ -8,6 +8,13 @@
     openFirewall = true;
   };
 
+  # Required for gamepads and input creation
+  hardware.uinput.enable = true;
+  users.users.river.extraGroups = [
+    "uinput"
+    "video"
+  ];
+
   networking.firewall = {
     allowedTCPPorts = [
       47984
