@@ -67,6 +67,7 @@
       settings = {
         main = {
           capslock = "esc";
+          right = "up";
         };
       };
     };
