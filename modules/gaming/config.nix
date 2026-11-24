@@ -13,6 +13,7 @@ in
       environment.systemPackages = with pkgs; [
         osu-lazer-bin
         steam
+        xterm
         prismlauncher
         nvtopPackages.amd
       ];

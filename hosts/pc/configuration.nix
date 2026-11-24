@@ -51,6 +51,7 @@
     cmatrix
     rustdesk-flutter
     wine64Packages.waylandFull
+    winetricks
     aria2
     github-cli
   ];
