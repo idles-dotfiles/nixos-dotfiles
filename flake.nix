@@ -46,6 +46,11 @@
       url = "github:eklonofficial/Vice";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    claude-desktop = {
+      url = "github:B-Shinchan/claude-desktop-nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
